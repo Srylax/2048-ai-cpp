@@ -1,21 +1,23 @@
-AI for the [2048 game](http://gabrielecirulli.github.io/2048/). This uses a random evaluation algorithm, along with a highly-efficient bitboard representation.
+# 2048 AI - Using no hard-coded knowledge about the game.
 
-After seeing several AI projects for the game, I was interested in creating an AI that does not contain any hard-coded knowledge about the game (like scoring functions, hueristics etc). Instead the AI should "find out for itself" without me, the programmer having to know anything about game stratagy.
+AI for the [2048 game](http://gabrielecirulli.github.io/2048/). The AI uses a random evaluation algorithm, along with a highly-efficient bitboard representation.
 
-The implemented algorithm chooses which move to play like this: For each possible move, play it and then continue to play **random moves** until the game is finished. This is done many times and the move that returns the highest avarage score is chosen.
+After seeing several AI projects for the game, I was interested in creating an AI that does not contain any hard-coded knowledge about the game (like scoring functions, heuristics etc). Instead the AI should "find out for itself" without me, the programmer having to know anything about game strategy.
 
-The success of the AI is surprising as a random-walk game finishes quite quickly, yet chosing the highest yielding move among the random-walk games, results in very good game play. 
+The implemented algorithm chooses which move to play like this: For each possible move, play it and then continue to play **random moves** until the game is finished. This is done many times and the move that returns the highest average score is chosen.
 
-The default build runs 10000 games per move and results in 100% success rate in achiving the 2048 tile, 70% for 4096 tile, and about 1% for the 8192 tile!
+The success of the AI is surprising as a random-walk game finishes quite quickly, yet choosing the highest yielding move among the random-walk games, results in very good game play.
 
-Apart from the basic algorithm of avaraging the end score per move, I tried a few other techniques including:
+The default build runs 10000 games per move and results in 100% success rate in achieving the 2048 tile, 70% for 4096 tile, and about 1% for the 8192 tile!
+
+Apart from the basic algorithm of averaging the end score per move, I tried a few other techniques including:
 - Using the max, min, or some combination of them
-- Using depth: Instead of avaraging each of the 4 moves, The AI avarages a move list's (for example left left up) results together.
-- Using a type of Markov Chain: Creating a move tree of a given depth and calculating the conditional probablity of each state.
+- Using depth: Instead of averaging each of the 4 moves, The AI averages a move list's (for example left left up) results together.
+- Using a type of Markov Chain: Creating a move tree of a given depth and calculating the conditional probability of each state.
 
-I didn't manage to gain any segnificant improvments with any of these changes. You can play around with them in the code.
+I didn't manage to gain any significant improvements with any of these changes. You can play around with them in the code.
 
-Hat tip to nneonneo for creating this very clever and fast playing infrastucture.
+Hat tip to nneonneo for creating this very clever and fast playing infrastructure.
 
 For more detail on how it works, [check out my answer on stackoverflow](http://stackoverflow.com/a/22389702/1056032).
 
@@ -56,3 +58,4 @@ Install [Remote Control for Firefox](https://addons.mozilla.org/en-US/firefox/ad
 Open up the [2048 game](http://gabrielecirulli.github.io/2048/) or any compatible clone and start remote control.
 
 Run `2048.py` and watch the game!
+
