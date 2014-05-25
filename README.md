@@ -19,7 +19,7 @@ I didn't manage to gain any significant improvements with any of these changes. 
 
 Hat tip to nneonneo for creating this very clever and fast playing infrastructure.
 
-For more detail on how it works, [check out my answer on stackoverflow](http://stackoverflow.com/a/22389702/1056032).
+For a detailed discussion, [check out my answer on stackoverflow](http://stackoverflow.com/a/23853848/632039).
 
 ## Building
 
